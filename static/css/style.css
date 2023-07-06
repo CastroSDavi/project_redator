@@ -27,6 +27,7 @@ html, body {
 }
 
 header {
+    white-space: nowrap;
     position: relative;
     height: 90px;
     padding: 10px;
@@ -38,6 +39,7 @@ header {
 }
 
 .header-title-link {
+    word-wrap: ;
     margin-left: 20px;
     font: normal bold 2.2rem var(--fonte-destaque);
     text-decoration: none;
@@ -157,27 +159,30 @@ header {
     width: 30px;
 }
 
-main {
-    height: 500px;
-    display: flex;
-}
-
 .section-cards{
     min-height: 600px;
-    display: grid;
-    grid-template-rows:90px auto ;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section-cards-title{
+    margin-left: 30px;
+    align-self: center;
+    color: var(--cor-principal);
 }
 
 .card{
-    grid-row-start: 2;
-    align-items: center;
     margin: 40px ;
     display: grid;
-    grid-template-rows: 3fr 1fr;
+    grid-template-rows: 2fr 1fr;
     height: 300px;
     width: 300px;
     box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover; 
 }
 
 .card-content { 
@@ -186,18 +191,17 @@ main {
     margin: 10px;
     grid-row-start: 2;
     color: var(--cor-principal);
+    align-items: center;
 }
 
 .card-title{
     grid-row: 1;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     overflow: hidden;
-    white-space: nowrap;
     text-overflow: ellipsis;
 }
 
 .card-link {
-    align-self: center;
     width: 90px;
     padding: 4px;
     grid-row: 2;

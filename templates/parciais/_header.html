@@ -1,6 +1,6 @@
 {% load static %}
 <header>
-    <h1 class="header-title"><a href="#" class="header-title-link"> O Redator</a></h1>
+    <h1 class="header-title"><a href="{% url 'index' %}" class="header-title-link"> O Redator</a></h1>
     <form action="{% url 'search_temas' %}" method="get">
         <div class="search-bar">
             <input name='q' type="text" id="search" placeholder="Buscar tema" value="{{search_temas}}">

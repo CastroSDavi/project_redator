@@ -18,6 +18,7 @@ class Redacao(models.Model):
         verbose_name_plural= 'Redacoes'
         
     tema = models.CharField(max_length=255);
+    imagem = models.ImageField(upload_to='pictures/%y/%m', blank=True)
     texto1 = models.TextField(blank=True);
     texto2 = models.TextField(blank=True);
     mostrar = models.BooleanField(default=True);
