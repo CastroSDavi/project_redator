@@ -1,9 +1,9 @@
 {% load static %}
 <header>
     <h1 class="header-title"><a href="#" class="header-title-link"> O Redator</a></h1>
-    <form action="/" method="get">
+    <form action="{% url 'search_temas' %}" method="get">
         <div class="search-bar">
-            <input type="text" id="search" placeholder="Digite o tema">
+            <input name='q' type="text" id="search" placeholder="Buscar tema" value="{{search_temas}}">
             <button type="submit" class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
     </form>
@@ -13,7 +13,7 @@
                 <a href="#" class="nav-link">Redações<i class="fa-solid fa-caret-down"></i>
                 </a>
                 <ul class="dropdown-menu">
-                    <li class="dropdown-item"><a class="dropdown-link" href="#">Temas de redação</a></li>
+                    <li class="dropdown-item"><a class="dropdown-link" href="{% url 'temas' %}">Temas de redação</a></li>
                     <li class="dropdown-item"><a class="dropdown-link" href="#">Rascunhos</a></li>
                     <li class="dropdown-item"><a class="dropdown-link" href="#">Redações corrigidas</a></li>
                 </ul>

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<main>
+    <h1>Temas</h1>
+    <section class="section-cards">
+        {% for redacao in redacoes %}
+        <div class="card">
+            <img class="card-img" class="card-img" src="" alt="">
+            <div class="card-content">
+                <h1 class="card-title">{{redacao.tema}}</h1>
+                <a class= 'card-link'href="">Ver detalhes</a>
+            </div>
+        </div>
+       {% endfor %}
+    </section>
+</main>
+{% endblock conteudo %}
