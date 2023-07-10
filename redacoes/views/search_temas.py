@@ -3,7 +3,7 @@ from ..models import Redacao
 
 def search_temas(request): 
     search_temas = request.GET.get('q','').strip()
-    redacoes = Redacao.objects.filter(tema__icontains=search_temas)
+    redacoes = Redacao.objects.filter(tema__icontains=search_temas).order_by('-id')
 
     if search_temas == '':
         return redirect("/temas")

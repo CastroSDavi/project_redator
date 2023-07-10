@@ -23,7 +23,7 @@
 }
 
 html, body {
-    font-family: Roboto;
+    font-family: var(--fonte-conteudo);
 }
 
 header {
@@ -39,7 +39,6 @@ header {
 }
 
 .header-title-link {
-    word-wrap: ;
     margin-left: 20px;
     font: normal bold 2.2rem var(--fonte-destaque);
     text-decoration: none;
@@ -159,26 +158,93 @@ header {
     width: 30px;
 }
 
-.section-cards{
+main { 
     min-height: 600px;
+}
+
+.section-cards {
+    margin-bottom: 100px;
+    display: grid;
+    gap: 15px;
+    grid-template-rows: 80px 1fr;
+    grid-template-columns: 1fr 300px;
+    grid-template-areas: "title title"
+                        "card-wrapper aside";
+}
+
+.filter-section{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    grid-area: aside;
+}
+
+.label-order_by {
+    font-size: 1.1rem
+}
+
+.label-filter {
+    display: block;
+    font-size:1.1rem
+}
+
+.checkbox-wrapper {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+}
+
+.select-order_by {
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.2);
+    opacity: 80%;
+    font: normal normal 0.9rem var(--fonte-conteudo);
+    height: 30px;
+    width: 120px;
+}
+
+.button-wrapper {
+    margin-top: 40px;
+}
+
+.button-filter-section {
+    font: normal normal 0.8rem var(--fonte-conteudo);
+    height: 30px;
+    width: 80px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.apply{
+    margin-right: 20px ;
+    background-color: #25edc4;
 }
 
 .section-cards-title{
-    margin-left: 30px;
-    align-self: center;
+    grid-area: title;
+    margin: 30px;
     color: var(--cor-principal);
 }
 
+.card-wrapper {
+    grid-area: card-wrapper;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+
 .card{
-    margin: 40px ;
+    position: relative;
     display: grid;
     grid-template-rows: 2fr 1fr;
     height: 300px;
     width: 300px;
     box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+    background-color: white;
 }
+
 .card-img{
     height: 100%;
     width: 100%;
@@ -202,20 +268,32 @@ header {
 }
 
 .card-link {
+    white-space: nowrap;
     width: 90px;
     padding: 4px;
     grid-row: 2;
     font-size: 0.9rem;
     border-radius: 5px;
     border: 1px solid var(--cor-secundaria);
-    background-color: transparent;
     color: var(--cor-secundaria);
     text-decoration: none;
+    transition: all 0.3s ease ;
 }
 
 .card-link:hover {
     background-color: var(--cor-secundaria);
     color: white;
+}
+
+.card-categoria{
+    font-size: 0.9rem;
+    position:absolute;
+    color: white;
+    background-color: var(--verde-escuro);
+    top: 20px;
+    right: 20px;
+    padding: 5px;
+    border-radius: 12px;
 }
 
 footer {
