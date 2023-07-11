@@ -1,0 +1,131 @@
+header {
+    white-space: nowrap;
+    position: relative;
+    height: 90px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--cor-background);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 4px;
+}
+
+.header-title-link {
+    margin-left: 20px;
+    font: normal bold 2.2rem var(--fonte-destaque);
+    text-decoration: none;
+    color: var(--cor-principal);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-item {
+    position: relative;
+    padding: 10px;
+    height: 100%;
+    border-radius: 25px;
+}
+
+.nav-item:last-child {
+    margin-right: 20px;
+}
+
+.nav-link {
+    font: normal bolder 1rem var(--fonte-secundaria);
+    text-decoration: none;
+    color: var(--cor-secundaria);
+}
+
+.fa-caret-down {
+    margin-left: 10px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 450px;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;
+}
+
+.search-bar > input[type="text"] {
+    flex: 1 1 0%;
+    font: normal normal 1rem var(--fonte-conteudo);
+    border-radius: 20px 0px 0px 20px;
+    width: 100%;
+    height: 35px;
+    border: none;
+    padding: 0px 10px;
+    background-color: transparent;
+    color: var(--charcoal);
+    opacity: 0.8;
+    outline: none;
+}
+
+.search-button {
+    height: 35px;
+    width: 50px;
+    border: none;
+    border-radius: 0px 20px 20px 0px;
+    background-color: var(--cor-principal);
+    color: rgb(255, 255, 255);
+    outline: none;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    list-style-type: none;
+    position: absolute;
+    background-color: var(--cor-background);
+    width: 200px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-item {
+    padding: 10px;
+}
+
+.dropdown-item:hover {
+    background-color: var(--cor-secundaria);
+}
+
+.dropdown-link {
+    color: var(--cor-secundaria);
+    text-decoration: none;
+}
+
+.dropdown-item:hover .dropdown-link {
+    color: var(--cor-background);
+}
+
+.search-button:hover {
+    background-color: var(--cor-principal-hover);
+}
+
+.user {
+    font: 1rem Roboto;
+    color: rgb(255, 255, 255);
+}
+
+.user-icon-wrapper {
+    background-color: var(--cor-secundaria);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+}
