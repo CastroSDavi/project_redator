@@ -12,13 +12,13 @@ class Categoria(models.Model):
     def __str__(self) -> str:
         return self.nome
     
-class Redacao(models.Model):
+class Temas(models.Model):
     class Meta:
-        verbose_name = 'Redacao'
-        verbose_name_plural= 'Redacoes'
+        verbose_name = 'Tema'
+        verbose_name_plural= 'Temas'
         
     tema = models.CharField(max_length=255);
-    imagem = models.ImageField(upload_to='pictures/%y/%m', blank=True)
+    imagem = models.ImageField(upload_to='pictures/%y/%m', blank=True);
     texto1 = models.TextField(blank=True);
     texto2 = models.TextField(blank=True);
     mostrar = models.BooleanField(default=True);

@@ -21,7 +21,10 @@
 
 <body>
     {% include 'parciais/_header.html' %}
-    {% block conteudo %}{% endblock conteudo %}
+    <main>
+        {% block conteudo %}
+        {% endblock conteudo %}
+    </main>
 </body>
     {% include 'parciais/_footer.html'%}
 </html>

@@ -9,17 +9,8 @@ html, body {
 }
 
 main { 
+    position: relative;
     min-height: 600px;
-}
-
-.section-cards {
-    margin-bottom: 100px;
-    display: grid;
-    gap: 15px;
-    grid-template-rows: 80px 1fr;
-    grid-template-columns: 1fr 300px;
-    grid-template-areas: "title title"
-                        "card-wrapper aside";
 }
 
 .filter-section{
@@ -36,9 +27,13 @@ main {
     display: block;
     font-size:1.1rem
 }
-
-.checkbox-wrapper {
+.checkbox-wrapper{
     margin-top: 40px;
+}
+
+.checkbox-content {
+    margin-top:  30px;
+    font-weight: 350;
     display: grid;
     grid-template-columns: 1fr 1fr ;
 }
@@ -71,37 +66,52 @@ main {
     background-color: #25edc4;
 }
 
+.section-cards {
+    margin-bottom: 100px;
+    display: grid;
+    gap: 15px;
+    grid-template-rows: 80px 1fr;
+    grid-template-columns: 1fr minmax(200px, 300px);
+    grid-template-areas: "title title"
+                        "card-wrapper aside";
+}
+
 .section-cards-title{
+    font-size: 1.8rem;
     grid-area: title;
     margin: 30px;
     color: var(--cor-principal);
 }
 
 .card-wrapper {
+    margin: 0 30px 0 30px;
     grid-area: card-wrapper;
     display: grid;
     gap: 30px;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
+    grid-template-columns: repeat(3, minmax(300px,1fr));
 }
 
 .card{
     position: relative;
     display: grid;
-    grid-template-rows: 2fr 1fr;
+    grid-template: "imagem" 200px
+                    "conteudo" 1fr;
     height: 300px;
-    width: 300px;
+    width: 100%;
     box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
     background-color: white;
 }
 
 .card-img{
+    grid-area: imagem;
+    object-fit: cover;
+    overflow: hidden;
     height: 100%;
     width: 100%;
-    object-fit: cover; 
 }
 
 .card-content { 
+    grid-area: conteudo;
     display: grid;
     grid-template-rows: 1fr 1fr;
     margin: 10px;
@@ -112,7 +122,7 @@ main {
 .card-title{
     color: var(--cor-principal);
     grid-row: 1;
-    font-size: 1.1rem;
+    font-size: 1.0rem;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -144,30 +154,4 @@ main {
     right: 20px;
     padding: 5px;
     border-radius: 12px;
-}
-
-footer {
-    padding: 20px;
-    text-align: center;
-    background-color: var(--cor-footer);
-    color: var(--charcoal);
-}
-
-.footer-icons {
-    margin: 0px auto 10px;
-}
-
-.footer-link {
-    cursor: pointer;
-    display: inline-block;
-    margin: 0px 10px;
-    border-radius: 50%;
-    padding: 5px;
-    color: var(--cor-secundaria);
-    text-decoration: none;
-    background-color: transparent;
-}
-
-.footer-text {
-    font: normal normal 0.8rem var(--fonte-conteudo);
 }

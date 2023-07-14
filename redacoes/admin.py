@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import Redacao, Categoria
+from .models import Temas, Categoria
 # Register your models here.
-class RedacaoAdmin(admin.ModelAdmin):
+class TemasAdmin(admin.ModelAdmin):
     list_display = ['tema', 'mostrar']
     list_editable = ['mostrar']
     list_per_page = 10
@@ -11,5 +11,5 @@ class CategoriaAdmin(admin.ModelAdmin):
     list_per_page = 10
     
 
-admin.site.register(Redacao, RedacaoAdmin)
+admin.site.register(Temas, TemasAdmin)
 admin.site.register(Categoria, CategoriaAdmin)

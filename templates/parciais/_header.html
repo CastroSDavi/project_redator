@@ -13,9 +13,15 @@
                 <a href="#" class="nav-link">Redações<i class="fa-solid fa-caret-down"></i>
                 </a>
                 <ul class="dropdown-menu">
-                    <li class="dropdown-item"><a class="dropdown-link" href="{% url 'temas' %}">Temas de redação</a></li>
-                    <li class="dropdown-item"><a class="dropdown-link" href="#">Rascunhos</a></li>
-                    <li class="dropdown-item"><a class="dropdown-link" href="#">Redações corrigidas</a></li>
+                    <a href="{% url 'temas' %}" class="dropdown-link">
+                        <li class="dropdown-item">Temas de redação</li>
+                    </a>
+                    <a href="#" class="dropdown-link">
+                        <li class="dropdown-item">Rascunhos</li>
+                    </a>
+                    <a href="#" class="dropdown-link">
+                        <li class="dropdown-item">Redações corrigidas</li>
+                    </a>
                 </ul>
             </li>
             <li class="nav-item">

@@ -79,6 +79,11 @@ header {
     cursor: pointer;
 }
 
+.search-button:hover {
+    background-color: var(--cor-principal-hover);
+}
+
+
 .dropdown-menu {
     display: none;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -95,24 +100,18 @@ header {
 }
 
 .dropdown-item {
+    background-color: var(--cor-background);
+    color: var(--cor-secundaria);
     padding: 10px;
 }
 
 .dropdown-item:hover {
     background-color: var(--cor-secundaria);
-}
-
-.dropdown-link {
-    color: var(--cor-secundaria);
-    text-decoration: none;
-}
-
-.dropdown-item:hover .dropdown-link {
     color: var(--cor-background);
 }
 
-.search-button:hover {
-    background-color: var(--cor-principal-hover);
+.dropdown-link {
+    text-decoration: none;
 }
 
 .user {
