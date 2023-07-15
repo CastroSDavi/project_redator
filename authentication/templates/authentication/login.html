@@ -11,13 +11,14 @@
 <body>
     <main>
         <section class="section-auth-accounts">
-            <form action="" method="post" class="form-auth">
+            <form action="" method="post" class="form-auth" autocomplete="on">
                 <div class="auth-wrapper">
                     <div class="login-wrapper">
                         <h2 class="title-login">Login</h2>
-                        <input type="text" id="login-email" placeholder="Email" required>
+                        <input type="text" id="login-email" placeholder="Email" required autocomplete="email" >
                         <input type="password" name="login-password" id="login-password" placeholder="Senha" required>
                         <button type="submit">Entrar</button>
+                        </form>
                         <div class="forgot-password">
                             <a href="#" class="forgot-password-link">Esqueceu sua senha?</a>
                         </div>
@@ -28,7 +29,6 @@
                         <a href="#" class="register-link">Criar conta</a>
                     </div>
                 </div>
-            </form>
         </section>
     </main>
 </body>
