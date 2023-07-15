@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/variables.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section class="section-auth-accounts">
+            <form action="" method="post" class="form-auth">
+                <div class="auth-wrapper">
+                    <div class="login-wrapper">
+                        <h2 class="title-login">Login</h2>
+                        <input type="text" id="login-email" placeholder="Email" required>
+                        <input type="password" name="login-password" id="login-password" placeholder="Senha" required>
+                        <button type="submit">Entrar</button>
+                        <div class="forgot-password">
+                            <a href="#" class="forgot-password-link">Esqueceu sua senha?</a>
+                        </div>
+                    </div>
+                    <div class="register-wrapper">
+                        <h2 class="title-register">Cadastre-se</h2>
+                        <p>Seja parte da nossa comunidade! Crie uma conta gratuita para acessar recursos exclusivos.</p>
+                        <a href="#" class="register-link">Criar conta</a>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
