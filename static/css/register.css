@@ -1,0 +1,67 @@
+.section-register-user {
+    background-color: var(--cor-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.register-user-wrapper{
+    padding: 30px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px var(--sombra-padrao);
+    width: 700px;
+}
+
+.register-user-title {
+    font-size: 2rem;
+    text-shadow: 1px 1px 1px var(--sombra-padrao);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.register-form-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-form-wrapper > label {
+    padding: 10px;
+}
+
+.register-form-wrapper > input[type='text'], input[type='password'], input[type='email'], input[type='tel'] {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    height: 45px;
+    width: 100%;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.register-form-wrapper > input:focus {
+    outline: none;
+    border-color: var(--cor-secundaria);
+}
+
+
+.register-form-wrapper > button {
+    margin-top: 30px;
+    font-size: 1rem;
+    color: white;
+    background-color: var(--cor-principal);
+    border: none;
+    border-radius: 30px;
+    width: 60%;
+    align-self: center;
+    height: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+} 
+
+.register-form-wrapper > button:hover {
+    background-color: var(--cor-principal-hover);
+}
+    

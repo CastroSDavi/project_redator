@@ -1,17 +1,14 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <link rel="stylesheet" href="{% static 'css/main.css' %}">
-    <link rel="stylesheet" href="{% static 'css/variables.css' %}">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    {% include 'parciais/_head.html' %}
 </head>
 <body>
     <main>
         <section class="section-auth-accounts">
             <form action="" method="post" class="form-auth" autocomplete="on">
+                {% csrf_token %}
                 <div class="auth-wrapper">
                     <div class="login-wrapper">
                         <h2 class="title-login">Login</h2>
@@ -26,7 +23,7 @@
                     <div class="register-wrapper">
                         <h2 class="title-register">Cadastre-se</h2>
                         <p>Seja parte da nossa comunidade! Crie uma conta gratuita para acessar recursos exclusivos.</p>
-                        <a href="#" class="register-link">Criar conta</a>
+                        <a href="{% url 'register' %}" class="register-link">Criar conta</a>
                     </div>
                 </div>
         </section>

@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'parciais/_head.html'%} 
+</head>
+<body>
+    <main>
+        <section class="section-register-user">
+            <div class="register-user-wrapper">
+                <a href="{% url 'login' %}"><i class="fa-solid fa-xmark" style="color: #000000;"></i></a>
+                <h2 class="register-user-title">Criar sua conta</h2>
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <div class="register-form-wrapper">
+                        <label for="id_first_name_register">Nome</label>
+                        <input type="text" name="first_name_register" id="id_first_name_register">
+                        <label for="id_last_name_register">Sobrenome</label>
+                        <input type="text" name="last_name_register" id="id_last_name_register">
+                        <label for="id_email_register">Email</label>
+                        <input type="email" name="email_register" id="id_email_register">
+                        <label for="id_tel_register">telefone</label>
+                        <input type="tel" name="tel_register" id="id_tel_register">
+                        <label for="id_password_register">Senha</label>
+                        <input type="password" name="password_register" id="id_password_register">
+                        <button type="submit">Cadastrar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+</body>
+</html>
