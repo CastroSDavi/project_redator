@@ -11,7 +11,7 @@
                 {% csrf_token %}
                 <div class="auth-wrapper">
                     <div class="login-wrapper">
-                        <h2 class="title-login">Login</h2>
+                        <h2 class="auth-title title-login">Login</h2>
                         <input type="text" id="login-email" placeholder="Email" required autocomplete="email" >
                         <input type="password" name="login-password" id="login-password" placeholder="Senha" required>
                         <button type="submit">Entrar</button>
@@ -21,7 +21,7 @@
                         </div>
                     </div>
                     <div class="register-wrapper">
-                        <h2 class="title-register">Cadastre-se</h2>
+                        <h2 class="auth-title title-register">Cadastre-se</h2>
                         <p class="content-register">Seja parte da nossa comunidade! Crie uma conta gratuita para acessar recursos exclusivos.</p>
                         <a href="{% url 'register' %}" class="register-link">Criar conta</a>
                     </div>

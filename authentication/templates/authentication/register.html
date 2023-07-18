@@ -6,10 +6,10 @@
 </head>
 <body>
     <main>
-        <section class="section-register-user">
+        <section class="section-auth-accounts">
             <div class="register-user-wrapper">
                 <a href="{% url 'login' %}"><i class="fa-solid fa-xmark" style="color: #000000;"></i></a>
-                <h2 class="register-user-title">Criar sua conta</h2>
+                <h2 class="auth-title">Criar sua conta</h2>
                 <form action="" method="post" autocomplete="on">
                     {% csrf_token %}
                     <div class="register-form-wrapper">
