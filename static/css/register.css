@@ -28,6 +28,7 @@
 }
 
 .register-form-wrapper > label {
+    color: rgba(0, 0, 0, 0.8);
     padding: 10px;
 }
 
@@ -64,4 +65,3 @@
 .register-form-wrapper > button:hover {
     background-color: var(--cor-principal-hover);
 }
-    

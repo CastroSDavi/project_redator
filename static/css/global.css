@@ -11,5 +11,5 @@ html, body {
 
 main { 
     position: relative;
-    min-height: 600px;
+    min-height: 100vh;
 }
