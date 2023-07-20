@@ -18,9 +18,9 @@ class Temas(models.Model):
         verbose_name_plural= 'Temas'
         
     tema = models.CharField(max_length=255);
-    imagem = models.ImageField(upload_to='pictures/%y/%m', blank=True);
-    texto1 = models.TextField(blank=True);
-    texto2 = models.TextField(blank=True);
+    imagem = models.ImageField(upload_to='pictures/%y/%m',blank=True);
+    texto_motivador_1 = models.TextField(blank=True);
+    texto_motivador_2 = models.TextField(blank=True);
     mostrar = models.BooleanField(default=True);
     categoria = models.ForeignKey(
         Categoria,

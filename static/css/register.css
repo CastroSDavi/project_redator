@@ -9,7 +9,7 @@
 
 .auth-wrapper {
     position: relative;
-    max-width: 700px;
+    max-width: 800px;
     display: grid;
     grid-template: "cadastro login"/ 1fr 1fr;
     border-radius: 30px;
@@ -18,7 +18,7 @@
 
 .login-wrapper,
 .register-wrapper {
-    padding: 30px;
+    padding: 40px;
     display: flex;
     flex-direction: column;
 }
@@ -29,7 +29,7 @@
     background-color: white;
 }
 
-.register-wrapper {
+.register-login-wrapper {
     grid-area: cadastro;
     border-radius: 20px 0px 0px 20px;
     background-color: var(--cor-secundaria);
@@ -40,6 +40,7 @@
 .content-register {
     text-align: justify;
 }
+
 .register-link {
     color: white;
     font-size: 0.9rem;
@@ -112,12 +113,28 @@
 color: var(--cor-principal);
 }
 
-.register-user-wrapper{
-    padding: 30px;
-    background-color: white;
-    border-radius: 20px;
-    box-shadow: 2px 2px 4px var(--sombra-padrao);
+
+/* Área de Registro */
+
+textarea {
+    padding: 10px;
+}
+
+.section-create-temas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-temas-wrapper{
+    width: 900px;
+}
+
+.register-user-wrapper {
     width: 700px;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 2px 2px 4px var(--sombra-padrao);
 }
 
 .register-form-wrapper {
@@ -127,10 +144,10 @@ color: var(--cor-principal);
 
 .register-form-wrapper > label {
     color: rgba(0, 0, 0, 0.8);
-    padding: 10px;
+    padding: 10px 0px;
 }
 
-.register-form-wrapper > input[type='text'], input[type='password'], input[type='email'], input[type='tel'] {
+.register-form-wrapper  input[type='text'], input[type='password'], input[type='email'], input[type='tel'] {
     padding: 10px;
     font-size: 1rem;
     border: 1px solid rgba(0, 0, 0, 0.2);
@@ -140,13 +157,20 @@ color: var(--cor-principal);
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.register-form-wrapper > input:focus {
+.register-form-wrapper  input[type='checkbox'] {
+    align-self: start;
+}
+.register-form-wrapper  select {
+    align-self: start;
+    width: 30%;
+}
+
+.register-form-wrapper  input:focus, textarea:focus {
     outline: none;
     border-color: var(--cor-secundaria);
 }
 
-
-.register-form-wrapper > button {
+.register-form-wrapper  button {
     margin-top: 30px;
     font-size: 1rem;
     color: white;
@@ -160,6 +184,6 @@ color: var(--cor-principal);
     transition: background-color 0.3s ease;
 } 
 
-.register-form-wrapper > button:hover {
+.register-form-wrapper  button:hover {
     background-color: var(--cor-principal-hover);
 }

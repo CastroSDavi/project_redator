@@ -1,1 +1,19 @@
 {% extends 'base.html' %}
+{% block conteudo %}
+<section class="section-create-temas">
+    <div class="register-wrapper register-temas-wrapper">
+        <h2 class="section-title">Criar Tema</h2>
+        <form action="{% url 'create_temas' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="register-form-wrapper">
+                {% for field in form %}
+                <label for="{{field.id_for_label}}">{{field.label}}</label>
+                {{field}}
+                {{field.errors}}
+                {% endfor %}
+                <button type="submit">Cadastrar</button>
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock conteudo %}
